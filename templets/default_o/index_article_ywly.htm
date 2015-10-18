@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/default.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/style/flower.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmspath/}/images/js/j.js" ></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmspath/}/images/js/ltxt.js" ></script>
+<script type="text/javascript"> 
+$(function() {
+	$(".mleft dd").slideUp();
+	var $dt = $(".mleft dt");
+	$dt.click(function(){
+		$dt.removeClass("over_bg").eq($dt.index($(this))).addClass("over_bg");
+		var $dd = $(".mleft dd");
+		$dd.slideUp().eq($dd.index($(this).next())).slideDown();
+		var _l=$(this).attr("lang").split(',');
+		$(this).attr("rel")=='1' ? getTxt($(this),$(".mright"),$(".txt_finish")):'';
+	});
+	var $li = $(".mleft dd li");
+	$li.click(function(){
+		$li.removeClass("overli").eq($li.index($(this))).addClass("overli");
+		if($(this).attr("rel")!="2"){getTxt($(this),$(".mright"),$(".txt_finish"));}
+	});
+	$li.each(function(){$(this).attr("rel")=="2" ? $(this).find("a").attr("target","_blank") : $(this).find("a").attr("href","javascript:");});
+	
+	var _h = window.location.hash;
+	_h =_h==''?_h:_h.substring(1);
+	var _c = $dt.eq(_h);
+	_c.click();
+	_c.attr("rel")=='1' ? '' : $(".mleft dd").eq(_h).find("li:first").click();
+});
+
+</script>
+</head>
+<body class="channel">
+{dede:include filename="head.htm"/} 
+<!-- /header -->
+<span class="txt_finish"><img src="{dede:global.cfg_templets_skin/}/images/flower/loader.gif" width="16" height="16" alt="数据加载..." style="vertical-align: middle" /> 正在努力加载...</span>
+<div class="topbg">
+	<div class="footbg">
+    	<div class="mleft">
+		{dede:channelartlist}
+        	<dl>
+            	<dt lang="{dede:field name='id'/}" rel="{dede:field name='iscontent'/}">{dede:field name='typename'/}</dt>
+                <dd>
+                	<ul>{dede:channel type='son' noself='yes'}<li lang="[field:id/]" rel="[field:iscontent/]"><a href='[field:typeurl/]'>[field:typename/]</a></li>{/dede:channel}</ul>
+                </dd>
+            </dl>
+        {/dede:channelartlist}
+        </div>
+    	<div class="mright">{dede:field.content/}</div>
+        <input type="hidden" id="act" name="act" value="txt" />
+    </div>
+</div>
+{dede:include filename="footer.htm"/} 
+<!-- /footer -->
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" type="text/css" href="/templets/css/a.css">
+<link rel="stylesheet" type="text/css" href="/templets/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="/templets/css/global.css"/>
+<script type=text/javascript src="/templets/js/jquery.js"></script>
+<script type=text/javascript src="/templets/js/global.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+{dede:include filename="ad.htm"/}
+<div class="wapper_02">
+  <div class="new_box">
+    <div class="news_main">
+      <div class="news_menu"> {dede:include filename="left_0.htm"/} </div>
+      <div class="news_list">
+        <div class="postion"> <span>您当前的位置：</span>{dede:field name='position' /} </div>
+        <div class="contents"> {dede:field.content/} </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="clear:both;"></div>
+{dede:include filename="foot_sy.htm"/}
+</body>
+</html>

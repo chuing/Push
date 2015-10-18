@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" type="text/css" href="/templets/css/a.css">
+<link rel="stylesheet" type="text/css" href="/templets/css/style.css"/>
+<SCRIPT type=text/javascript src="/templets/js/jquery.js"></SCRIPT>
+</head>
+
+<body>
+<!----head start----->
+{dede:include filename="head.htm"/}
+<!----End of head---->
+<div class="wapper_02"><!----wapper_02 start----->
+		<div class="flash_ser"><img src="/templets/images/fangan.jpg" /></div>
+		<div class="wapper_08"><!----wapper_06 start----->
+			<div class="soft_left"><!----soft_left start----->
+				<h2><img src="/templets/images/conta.png" /></h2>
+				<ul>
+					{dede:channel type='son' currentstyle="<li><a href='~typelink~' class='thisclass'>~typename~</a></li>"}
+					<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+					{/dede:channel}
+				</ul>
+			</div><!----End of soft_left---->
+			
+			<div class="lx_main"><!----soft_main start----->
+				<h2><img src="/templets/images/contact.png" /></h2>/
+				<div class="soft_text">
+				{dede:field.content/}
+				</div>
+				<div class="soft_img4"><img src="/templets/images/us.png" /></div>
+			</div><!----End of soft_main---->
+		</div><!----End of wapper_06---->
+</div><!----End of wapper_02---->
+<div style="clear:both;"></div>
+{dede:include filename="foot_sy.htm"/}
+</body>
+</html>

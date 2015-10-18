@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" type="text/css" href="/templets/css/a.css">
+<link rel="stylesheet" type="text/css" href="/templets/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="/templets/css/global.css"/>
+<SCRIPT type=text/javascript src="/templets/js/jquery.js"></SCRIPT>
+<SCRIPT type=text/javascript src="/templets/js/jquery-1.4.4.min.js"></SCRIPT>
+<SCRIPT type=text/javascript src="/templets/js/slides.min.jquery.js"></SCRIPT>
+<SCRIPT type=text/javascript src="/templets/js/cpzs.js"></SCRIPT>
+</head>
+
+<body>
+
+<!----head start----->
+{dede:include filename="head.htm"/}
+<!----End of head---->
+<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true,
+				animationStart: function(){
+					$('.caption').animate({
+						bottom:-35
+					},100);
+				},
+				animationComplete: function(current){
+					$('.caption').animate({
+						bottom:0
+					},200);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log(current);
+					};
+				}
+			});
+		});
+	</script>
+<div class="flash_wapper"><!----flash_wapper start---->
+	<!--中间banner-start-->
+<div id="container">
+	  <div id="example">
+		<img src="{dede:global.cfg_templets_skin/}/img/new-ribbon.png" width="112" height="112" alt="New Ribbon" id="ribbon">
+		<div id="slides">
+			<div class="slides_container">
+				<div>
+				<a href="http://www.sd-seo.cn/" title="日照百度优化 | 日照网站建设" target="_blank"><img src="{dede:global.cfg_templets_skin/}/img/slide-1.jpg" width="980" height="273" alt="Slide 1"></a>
+			<div class="caption" style="bottom:0">
+				<p><font color="#FFFFFF">日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化</font></p>
+			</div>
+		</div>
+			<div>
+			<a href="http://www.sd-seo.cn/" title="日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化" target="_blank"><img src="{dede:global.cfg_templets_skin/}/img/slide-2.jpg" width="980" height="273" alt="Slide 2"></a>
+			<div class="caption">
+			<p><font color="#FFFFFF">日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化</font></p>
+			</div>
+			</div>
+			<div>
+			<a href="http://www.sd-seo.cn/" title="日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化" target="_blank"><img src="{dede:global.cfg_templets_skin/}/img/slide-3.jpg" width="980" height="273" alt="Slide 3"></a>
+			<div class="caption">
+					<p><font color="#FFFFFF">日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化</font></p>
+			</div>
+		</div>
+			<div>
+			<a href="http://www.sd-seo.cn/" title="日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化" target="_blank"><img src="{dede:global.cfg_templets_skin/}/img/slide-4.jpg" width="980" height="273" alt="Slide 4"></a>
+			<div class="caption">
+				<p><font color="#FFFFFF">日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化</font></p>
+			</div>
+		</div>
+		<div>
+			<a href="http://www.sd-seo.cn/" title="日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化" target="_blank"><img src="{dede:global.cfg_templets_skin/}/img/slide-5.jpg" width="980" height="273" alt="Slide 5"></a>
+			<div class="caption">
+				<p><font color="#FFFFFF">日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化</font></p>
+			</div>
+		</div>
+		<div>
+		<a href="http://www.sd-seo.cn/" title="twelve.inch | Flickr - Photo Sharing!" target="_blank"><img src="{dede:global.cfg_templets_skin/}/img/slide-6.jpg" width="980" height="273" alt="Slide 6"></a>
+			<div class="caption">
+				<p><font color="#FFFFFF">日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化</font></p>
+			</div>
+		</div>
+		<div>
+		<a href="http://www.sd-seo.cn/" title="日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化" target="_blank"><img src="{dede:global.cfg_templets_skin/}/img/slide-7.jpg" width="980" height="273" alt="Slide 7"></a>
+			<div class="caption">
+				<p><font color="#FFFFFF">日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化</font></p>
+			</div>
+		</div>
+	</div>
+	<a href="#" class="prev"><img src="{dede:global.cfg_templets_skin/}/img/arrow-prev.png" width="24" height="43" alt="上一页"></a>
+	<a href="#" class="next"><img src="{dede:global.cfg_templets_skin/}/img/arrow-next.png" width="24" height="43" alt="下一页"></a>				  </div>
+	<img src="{dede:global.cfg_templets_skin/}/img/example-frame.png" width="980" height="235" alt="" id="frame"></div>
+</div>
+<!--中间banner-end--> 
+</div><!----End of flash_wapper---->
+<div class="wapper"><!----wapper start---->
+	<div class="news"><!----news start---->
+		<div class="news_title"></div>
+		<ul>
+		
+		{dede:arclist row='9' typeid='11' titlelen='30' row='1'}
+					<li style="padding-left:50px;"><A href="[field:arcurl/]"  title="[field:fulltitle/]" target="_blank" />[field:title/]</A></li>
+					{/dede:arclist}
+			{dede:arclist row='9' typeid='10' titlelen='30' row='1'}
+					<li><A href="[field:arcurl/]"  title="[field:fulltitle/]" target="_blank" />[field:title/]</A></li>
+					{/dede:arclist}
+			<li class="more" style="width:48px;"><a href="/a/xwzx/">More</a></li>			
+		</ul>
+	</div><!----End of news---->
+	<div class="tese"><!----tese start----->
+		<ul>			
+			<li>
+				<a href="/a/fwxm/"><img src="/templets/images/image01.png" />
+				<h2>专业网站建设团队一站式服务 让客户省时、省心</h2></a>
+				<div class="xian"></div>
+			</li>
+			<li>
+				<a href="/a/wzjs/"><img src="/templets/images/image02.png" />
+				<h2>为企业提供专业的网络营销推广策划</h2></a>
+				<div class="xian"></div>
+			</li>
+			<li style="margin-right:0px;">
+				<a href="/a/fwxm/tywz/"><img src="/templets/images/image03.png" /><h2>
+				量身策划有竞争力的网站解决方案</h2></a>
+				<div class="xian"></div>
+			</li>
+		</ul>
+	</div><!----End of tese----->
+		<div class="left_main"><!----left_main start----->
+			<div class="about_as"><!----about_as start----->
+				<div class="title"></div>
+				<div class="about_con">
+					<div class="about_text">兄弟网络科技工作室成立于2008年，核心拥有专业的技术团队----是一家专业从事<a href="www.sd-seo.cn" style="color:#FF0000;">日照百度推广,日照百度优化,日照网站建设,日照网络公司,日照网站制作,日照网站优化,日照软件制作</a>,开发与应用的高新技术机构。作为日照地区唯一一家以网络工作室名义存在的网站建设机构，我们致力于为企业提供优秀的网站建设……【<a href="/a/lxwm/about/" style="color:#FF0000;">查看更多</a>】</div>
+					<div class="imag"><img src="/templets/images/sd.png" /></div>
+				</div>
+			</div><!----End of about_as----->
+			
+			<div class="advantage"><!----advantage start----->
+				<div class="advan_title"></div>
+				<ul style="padding-right:47px;">
+				<img src="/templets/images/zxt.png" style="padding-bottom:10px;" />
+					{dede:arclist row='9' typeid='26' titlelen='34'}
+					<li><A href="[field:arcurl/]"  title="[field:fulltitle/]" target="_blank" />[field:title/]</A></li>
+					{/dede:arclist}
+				</ul> 
+				<ul style="padding-right:40px;">
+				<img src="/templets/images/seott.png" style="padding-bottom:10px;" />
+					{dede:arclist row='9' typeid='34' titlelen='34'}
+					<li><A href="[field:arcurl/]"  title="[field:fulltitle/]" target="_blank" />[field:title/]</A></li>
+					{/dede:arclist}
+				</ul> 
+				<ul style="float:right; padding-right:18px;">
+				<img src="/templets/images/rjtt.png" style="padding-bottom:10px;" />
+					{dede:arclist row='9' typeid='35' titlelen='34'}
+					<li><A href="[field:arcurl/]"  title="[field:fulltitle/]" target="_blank" />[field:title/]</A></li>
+					{/dede:arclist}
+				</ul> 
+			</div><!----End of advantage----->
+		</div><!----End of left_main----->
+		
+		<div class="right_main"><!----right_main start----->
+		
+			<div class="case"><!----case start----->
+				<div class="case_title"></div>
+
+			<!----End of case----->
+
+			
+			<ul>
+{dede:arclist typeid='3' limit='1,12'}
+
+        	<li><span>[field:pubdate function="MyDate('y-m-d',@me)"/]</span><a href="[field:arcurl/]">[field:title/]</a></li>
+
+        {/dede:arclist}
+			</ul>
+			</div>
+
+			
+		</div><!----End of right_main----->
+		
+		<!--滚动图片-->
+		<div class="sy4">
+
+    <h1>{dede:type typeid='28'}<a href="[field:typelink /]">更多</a>{/dede:type}</h1>
+
+<DIV class=blk_18><A onmouseup="ISL_StopUp_1()" class="LeftBotton" onmousedown="ISL_GoUp_1()" onmouseout="ISL_StopUp_1()" href="javascript:void(0);" target="_self"></A>
+
+<DIV class=pcont id=ISL_Cont_1>
+
+<DIV class=ScrCont>
+
+<DIV id=List1_1><!-- piclist begin -->
+
+{dede:arclist typeid='28' row='15'}
+
+<a href="[field:arcurl/]" class="pl"><IMG height="129" src="[field:litpic/]" width="188">[field:title/]</A>
+
+{/dede:arclist}
+
+<!-- piclist end -->
+
+</DIV>
+
+<DIV id="List2_1"></DIV></DIV></DIV><A onmouseup="ISL_StopDown_1()" class="RightBotton" onmousedown="ISL_GoDown_1()" onmouseout="ISL_StopDown_1()" href="javascript:void(0);" target="_self"></A></DIV>
+
+<SCRIPT type="text/javascript">picrun_ini()</SCRIPT>
+
+    </div>
+<div class="sy6">
+
+    	<ul>
+
+        {dede:flink row='24' type='text' titlelen="80"  typeid="0"}
+    
+        	<li>[field:link /]</li>
+
+        {/dede:flink}
+		<li><a href="http://www.dedemao.com" target="_blank">织梦模板</a> </li>
+        </ul>
+
+    </div>
+</div><!----End of wapper---->
+
+<div style="clear:both;"></div>
+{dede:include filename="foot_sy.htm"/}
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" type="text/css" href="/templets/css/a.css">
+<link rel="stylesheet" type="text/css" href="/templets/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="/templets/css/global.css"/>
+<script type=text/javascript src="/templets/js/jquery-1.4.4.min.js"></script>
+<script type=text/javascript src="/templets/js/global.js"></script>
+<script language="javascript">
+$(function(){
+	$(".bar1 .m_title li:first,.bar2 .m_title_r li:first,.bar3 .m_title li:first").addClass("m_over");
+	$(".bar1 .barcont,.bar2 .barcont,.bar3 .barcont").hide();
+	$(".bar1 .barcont:first,.bar2 .barcont:first,.bar3 .barcont:first").show();
+	var $bar1 = $(".bar1 .m_title li");
+	var $bar2 = $(".bar2 .m_title_r li");
+	var $bar3 = $(".bar3 .m_title li");
+	//overshow($bar1);
+	//overshow($bar2);
+	//overshow($bar3);
+	function overshow(bar){
+		bar.hover(function(){
+			var ind = bar.index($(this));
+			bar.removeClass("m_over").eq(ind).addClass("m_over");
+			var cont = $(this).parent().parent().find(".barcont");
+			//alert(cont.length);
+			cont.hide().eq(ind).show();
+		},function(){});
+	}
+});
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+{dede:include filename="ad.htm"/}
+<div class="wapper">
+  <div class="left_main"> {dede:include filename="left_i.htm"/} </div>
+  <div class="right_main"> 
+    <!--<div class="advantage">
+			<div class="advan_title"></div>
+			<ul>
+				<img src="{dede:global.cfg_templets_skin/}/img/advantage_1.jpg" />
+			</ul>
+			<ul>
+				<img src="{dede:global.cfg_templets_skin/}/img/advantage_2.jpg" />
+			</ul>
+			<ul>
+				<img src="{dede:global.cfg_templets_skin/}/img/advantage_3.jpg" />
+			</ul> 
+		</div>-->
+    <div class="m_list bar1">
+      <ul class="m_title">
+        {dede:channel type='son' typeid='60' noself='yes'}
+        <li rel='[field:id/]'><a href='[field:typeurl/]' target="_blank">[field:typename/]</a></li>
+        {/dede:channel}
+      </ul>
+      <div class="barcont">
+        <ul class="m_cont f_l">
+          <li class="indent"><img src="{dede:global.cfg_templets_skin/}/img/company_1.jpg" />谱式达提供企业注册、企业管理咨询、人力资源等综合性服务的公司,公司拥有经验丰富、高素质、高水平的专业人士，具有雄厚的知识体系，丰富的操作经验，娴熟的沟通技巧，精通工商部门及税务部门等政府机构的相关办事程序，了解各类企业的注册方法和流程帮助客户达成目的
+            ... </li>
+        </ul>
+        <!--            
+			<ul class="m_cont f_r">
+				{dede:arclist row='9' typeid='65' titlelen='44'}
+				<li><span>[field:pubdate function="MyDate('y-m-d',@me)"/]</span><a href="[field:arcurl/]"  title="[field:fulltitle/]" target="_blank" />[field:title/]</a></li>
+				{/dede:arclist}
+            </ul>
+			--> 
+      </div>
+      <div class="barcont"> 000 </div>
+      <div class="barcont"> 111 </div>
+      <div class="barcont"> 222 </div>
+    </div>
+    <div class="m_list2 bar2">
+      <ul class="m_title_r">
+        {dede:channel type='son' row='5' typeid='61' noself='yes'}
+        <li rel='[field:id/]'><a href='[field:typeurl/]' target="_blank">[field:typename/]</a></li>
+        {/dede:channel}
+      </ul>
+      <div class="barcont">
+        <ul class="m_cont f_l">
+          <li class="indent"><img src="{dede:global.cfg_templets_skin/}/img/daili_1.jpg" /> RPO(招聘流程外包，RecruitmentProcess&nbsp;Outsourcing)。是指企业将招聘需求外包给第三方RPO专业公司来完成。<br />
+            RPO服务属于人力资源外包（HRO）的一种方式，它提供的是快速直通车式的服务，帮助企业节约管理成本。以解决客户紧急、重要、批量及经济招聘为
+            ...</li>
+        </ul>
+        <!--            <ul class="m_cont f_r">
+				{dede:arclist row='9' typeid='68' titlelen='44'}
+				<li><span>[field:pubdate function="MyDate('y-m-d',@me)"/]</span><a href="[field:arcurl/]"  title="[field:fulltitle/]" target="_blank" />[field:title/]</a></li>
+				{/dede:arclist}
+            </ul>--> 
+      </div>
+      <div class="barcont"> 111 </div>
+    </div>
+    <div class="m_list bar3">
+      <ul class="m_title">
+        {dede:channel type='son' typeid='62' noself='yes'}
+        <li rel='[field:id/]'><a href='[field:typeurl/]' target="_blank">[field:typename/]</a></li>
+        {/dede:channel}
+      </ul>
+      <div class="barcont">
+        <ul class="m_cont f_l">
+          <li class="indent"><img src="{dede:global.cfg_templets_skin/}/img/shanb_1.jpg" />个企业使用的商标不经过注册，最致命的弱点是商标使用人对该商标不享有商标专用权。就是说你使用这个商标，别人也可以使用这个商标，这就使商标标明商品来源的基本作用受到了影响，也导致商标代表一定商品质量和信誉的作用大打折扣。商标经商标局依法审查... </li>
+        </ul>
+        <!--            <ul class="m_cont f_r">
+				{dede:arclist row='9' typeid='73' titlelen='44'}
+				<li><span>[field:pubdate function="MyDate('y-m-d',@me)"/]</span><a href="[field:arcurl/]"  title="[field:fulltitle/]" target="_blank" />[field:title/]</a></li>
+				{/dede:arclist}
+            </ul>--> 
+      </div>
+      <div class="barcont"> 111 </div>
+    </div>
+    <div class="i_list">
+      <div class="list_title">工商财税<span><a href="/a/qyfw" target="_blank" title="更多...">更多>></a>&nbsp;&nbsp;</span></div>
+      <ul>
+        {dede:arclist typeid='60' limit='0,7'}
+        <li><span>[[field:pubdate function="MyDate('m-d',@me)"/]]</span><a href="[field:arcurl/]">[field:title/]</a></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    <div class="i_list" style="margin-left:20px;">
+      <div class="list_title">户口社保<span><a href="/a/rcfw/rsdl" target="_blank" title="更多...">更多>></a>&nbsp;&nbsp;</span></div>
+      <ul>
+        {dede:arclist typeid='61' limit='0,7'}
+        <li><span>[[field:pubdate function="MyDate('m-d',@me)"/]]</span><a href="[field:arcurl/]">[field:title/]</a></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="wapper">
+  <div class="sy6">
+    <ul>
+      {dede:flink row='24' type='text' titlelen="80"  typeid="0"}
+      <li>[field:link /]</li>
+      {/dede:flink}
+    </ul>
+  </div>
+</div>
+<div style="clear:both;"></div>
+{dede:include filename="foot_sy.htm"/}
+</body>
+</html>

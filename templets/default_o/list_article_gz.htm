@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/default.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/default/style/flower.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmspath/}/images/js/j.js" ></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmspath/}/images/js/ltxt.js" ></script>
+<script type="text/javascript"> 
+$(function() {
+	$("dd").slideUp();
+	var $dt = $(".mleft dt");
+	$dt.click(function(){
+		//$(this).hasClass("over_bg")?$(this).removeClass("over_bg"):$(this).addClass("over_bg");
+		$dt.removeClass("over_bg").eq($dt.index($(this))).addClass("over_bg");
+		var $dd = $(".mleft dd");
+		$dd.slideUp().eq($dd.index($(this).next())).slideDown();
+		var _l=$(this).attr("lang").split(',');
+		$(this).attr("rel")=='1' ? getTxt($(this),$(".mright"),$(".txt_finish")):'';
+	});
+	//$(".mleft dt").hover(function(){$(this).addClass("over_bg")},function(){$(this).hasClass("over_bg")?$(this).removeClass("over_bg"):$(this).addClass("over_bg");});
+	var $li = $(".mleft dd li");
+	$li.click(function(){
+		$li.removeClass("overli").eq($li.index($(this))).addClass("overli");
+		//alert($(this).html());
+		getTxt($(this),$(".mright"),$(".txt_finish"));
+	});
+	
+	$(".mleft dt:first").click();
+	$(".mleft dd li:first").click();
+});
+
+</script>
+</head>
+<body class="channel">
+{dede:include filename="head.htm"/} 
+<!-- /header -->
+<span class="txt_finish"><img src="{dede:global.cfg_templets_skin/}/images/flower/loader.gif" width="16" height="16" alt="数据加载..." style="vertical-align: middle" /> 正在努力加载...</span>
+<div class="topbg">
+	<div class="footbg">
+{dede:field.content/}
+        <input type="hidden" id="act" name="act" value="txt" />
+    </div>
+</div>
+{dede:include filename="footer.htm"/} 
+<!-- /footer -->
+</body>
+</html>

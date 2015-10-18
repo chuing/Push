@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" type="text/css" href="/templets/css/a.css">
+<link rel="stylesheet" type="text/css" href="/templets/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="/templets/css/global.css"/>
+<script type=text/javascript src="/templets/js/jquery.js"></script>
+<script type=text/javascript src="/templets/js/global.js"></script>
+</head>
+<body>
+<!----head start-----> 
+{dede:include filename="head.htm"/}
+{dede:include filename="ad.htm"/} 
+<!----End of head---->
+<div class="wapper_02"><!----wapper_02 start----->
+  <div class="new_box"><!-----news_box start------->
+    <div class="news_main"><!----news_main start----->
+      <div class="news_menu"><!----news_left start----->
+        <h2><a href="/a/xwzx/">{dede:type}[field:typename]{/dede:type}</a></h2>
+        <div class="info_ul">
+          <ul>
+            {dede:channel type='son' currentstyle="
+            <li><a href='~typelink~' class='thisclass'>~typename~</a></li>
+            "}
+            <li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+            {/dede:channel}
+          </ul>
+        </div>
+        <div class="n_list">
+          <div class="list_title">知识库<span><a href="/" target="_blank" title="更多...">更多>></a>&nbsp;&nbsp;</span></div>
+          <ul>
+            {dede:arclist typeid='81' limit='0,12'}
+            <li><a href="[field:arcurl/]">[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="n_list">
+          <div class="list_title">客户首选<span><a href="/" target="_blank" title="更多...">更多>></a>&nbsp;&nbsp;</span></div>
+          <ul>
+            {dede:arclist typeid='81' limit='0,12'}
+            <li><a href="[field:arcurl/]">[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="n_list">
+          <div class="list_title">常见问题<span><a href="/" target="_blank" title="更多...">更多>></a>&nbsp;&nbsp;</span></div>
+          <ul>
+            {dede:arclist typeid='81' limit='0,12'}
+            <li><a href="[field:arcurl/]">[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="n_list">
+          <div class="list_title">行业资讯<span><a href="/" target="_blank" title="更多...">更多>></a>&nbsp;&nbsp;</span></div>
+          <ul>
+            {dede:arclist typeid='81' limit='0,12'}
+            <li><a href="[field:arcurl/]">[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <!----end of news_left----->
+      
+      <div class="news_list"><!----news_right start----->
+        <div class="postion"> <span>您当前的位置：</span>{dede:field name='position' /} </div>
+        <div class="contents">
+          <ul>
+            {dede:list pagesize='10' }
+            <li>
+              <div class="biaoti"><a href="[field:arcurl/]">[field:title/]</a> 发布于：<span>[field:pubdate function="GetDateTimeMK(@me)"/]</span> </div>
+              <div class="descript">[field:description function='cn_substr(@me,150)'/]...</div>
+            </li>
+            {/dede:list}
+          </ul>
+        </div>
+        <div class="page">{dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="10"/}</div>
+      </div>
+      <!----end of news_right-----> 
+    </div>
+    <!-----End of news_main-------> 
+  </div>
+  <!-----End of news_box-------> 
+  
+</div>
+<!----End of wapper_02---->
+<div style="clear:both;"></div>
+{dede:include filename="foot_sy.htm"/}
+</body>
+</html>

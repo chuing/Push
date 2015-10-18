@@ -1,0 +1,30 @@
+<div class="header_top">  
+    <div class="w980 center">  
+     <span id="time" class="time"><a href="/foshan"><b>佛山站</b></a></span><span id="time" class="time"><a href="/guangzhou">广州站</a></span><span id="time" class="time"><a href="/shengzhen">深圳站</a></span><span id="time" class="time"><a href="/zhongshan">中山站</a></span>
+     <div class="toplinks">[<a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{dede:global.cfg_basehost/}');">设为首页</a>] [<a href="javascript:window.external.AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')">加入收藏</a>]</span></div>
+  </div> 
+</div>
+	<!-- //菜单 -->
+    <div id="navMenu" style="font-style:normal; font-weight:normal;">
+    	<ul>
+      	<li><a href='{dede:global.cfg_cmsurl/}/'><span>花城首页</span></a></li>
+      	{dede:channel type='top' row='3' currentstyle="<li><a href='~typelink~' ~rel~><span>~typename~</span></a></li>"}
+      	<li><a href='[field:typeurl/]' [field:rel/]><span>[field:typename/]</span></a></li>
+      	{/dede:channel}
+        {dede:channel typeid='15' row='2' currentstyle="<li><a href='~typelink~' ~rel~><span>~typename~</span></a></li>"}
+      	<li><a href='[field:typeurl/]' [field:rel/]><span>[field:typename/]</span></a></li>
+      	{/dede:channel}
+    	</ul>
+    </div>	
+<!-- //header -->
+<div class="w980"><img src="{dede:global.cfg_templets_skin/}/images/flower/logoad.jpg" width="980" height="420" /></div>
+<script language="javascript">
+$(function(){
+	var _pathname = window.location.pathname;
+	$("#navMenu li").each(function(){
+		var _href=$(this).find("a").attr("href");
+		$(this).removeClass("menuabg");
+		if(_pathname==_href){$(this).addClass("menuabg");}
+	});
+});
+</script>

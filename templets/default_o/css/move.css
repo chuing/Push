@@ -1,0 +1,138 @@
+﻿/*reset*/
+body,ul,li,h2,h3,div{margin:0;padding:0;border:0;}
+body{font-size:12px; font-family:"Microsoft YaHei";}
+ul{list-style-type:none;}
+a{text-decoration:none;}
+
+body{background:url(../img/beige_paper.png) left top repeat;}
+@font-face {
+    font-family: 'WebSymbolsRegular';
+    src:url('websymbols.woff');
+    src:url('websymbols.woff') format('woff'),
+        url('websymbols.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.utie{
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	background:url(../img/tiaobg.png) left top repeat;
+
+}
+.list{
+margin:0 auto;
+	list-style:none;
+	width:1084px;
+}
+.list li{
+	width:271px;
+	height:100px;
+	float:left;
+	background:#FFF;
+	box-shadow:0.5px 2px 4px #ccc;
+	-webkit-transition:0.3s all ease;
+	-moz-transition:0.3s all ease;
+	-ms-transition:0.3s all ease;
+	-o-transition:0.3s all ease;
+	transition:0.3s all ease;
+	overflow:hidden;
+	position:relative;
+}
+.list .border{
+	height:100px;
+	position:absolute;
+	left:0; top:0;
+	width:10px;
+	overflow:hidden;
+	opacity:0;
+	background:#F90;
+	-webkit-transition:0.3s all ease;
+	-moz-transition:0.3s all ease;
+	-ms-transition:0.3s all ease;
+	-o-transition:0.3s all ease;
+	-webkit-transition:.5s left ease;
+}
+.list li:hover{
+	background:#000;
+	box-shadow:2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.list li:hover .border{
+	opacity:1;
+}
+.text h2,.text a{
+	padding-top:34px;
+	font-family:"Microsoft YaHei";
+	color:#333;
+	text-shadow:1px 2px 4px #999;
+	font-size:30px;
+	font-weight:normal;
+	-webkit-transition:0.3s all ease;
+	-moz-transition:0.3s all ease;
+	-ms-transition:0.3s all ease;
+	-o-transition:0.3s all ease;
+}
+.text h3{
+	padding-top:5px;
+	font-family:Verdana;
+	font-size:14px;
+	color:#666;
+	font-weight:normal;
+	-webkit-transition:0.3s all ease;
+	-moz-transition:0.3s all ease;
+	-ms-transition:0.3s all ease;
+	-o-transition:0.3s all ease;
+}
+.list li:hover h2,.list li:hover  a{
+	color:#FFF;
+	font-size:30px;
+	text-shadow:1px 2px 4px #333;
+}
+.list li:hover .text h3{
+	color:#F60;
+	font-size:14px;
+	margin-top:5px;
+}
+.list li .icon{
+	width:60px;
+	height:90px;
+	margin-left:20px;
+	margin-top:5px;
+	float:left;
+	font-size:30px;
+	font-family:'WebSymbolsRegular';
+	line-height:90px;
+	text-align:left;
+	-webkit-transition:0.3s all ease;
+	-moz-transition:0.3s all ease;
+	-ms-transition:0.3s all ease;
+	-o-transition:0.3s all ease;
+	text-shadow:0 0 3px #CCCCCC;
+}
+.list li:hover .icon{
+	color:#F90;
+	font-size:40px;
+}
+.list li:hover .text{
+	-webkit-animation-name:shake;
+	-moz-animation-name:shake;
+}
+.text{
+	width:130px;
+	height:auto;
+	float:left;
+	height:70px;
+	-webkit-animation:.5s .2s ease both;
+-moz-animation:1s .2s ease both;
+}
+
+@-webkit-keyframes shake{
+0%,100%{-webkit-transform:translateX(0);}
+20%,60%{-webkit-transform:translateX(-10px);}
+40%,80%{-webkit-transform:translateX(10px);}
+}
+@-moz-keyframes shake{
+0%,100%{-moz-transform:translateX(0);}
+20%,60%{-moz-transform:translateX(-10px);}
+40%,80%{-moz-transform:translateX(10px);}
+}

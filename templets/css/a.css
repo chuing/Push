@@ -1,0 +1,171 @@
+﻿
+*{
+	padding:0;
+	margin:0;
+}
+html{
+	min-height:101%;
+}
+body{
+	font-family:verdana,arial,tahoma;
+	font-size:14px;
+	color:#333;
+	margin:0 auto;
+}
+div{
+margin:0 auto;
+}
+ul,ol,li {
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	word-wrap:break-word;
+}
+a:hover{
+	text-decoration:underline;
+}
+img{
+	border:0;
+}
+p{
+	line-height:26px;
+}
+
+#bottomright{ 
+	width:100%;
+}
+
+/* 全站导航 */
+#daohang{ 
+	width:100%;
+	height:63px; 
+	background:url(../images/KCnav_bg.png);
+	margin-bottom:2px;
+	position:relative; 
+	top:90px;
+	z-index:99;
+}
+.home{
+	margin-left:350px;
+}
+.tab{
+	position:relative;
+	display:block;
+	float:left;
+	cursor:pointer;
+}
+.tab .tablink{
+	position:relative;
+	padding:1px 12px;
+	line-height:63px;
+	display:block;
+	height:63px;
+	color:#fff;
+	font-size:14px;
+	z-index:99;
+	float:left;
+}
+.tab .tablink a{
+	line-height:63px;
+	color:#013d77;
+	text-decoration:none;
+}
+.tab:hover{
+	background-color:#002e5a;
+	opacity:0.9;
+	filter:alpha(opacity=90);
+ }
+.tab:hover .tablink{
+	color:#fff;
+	padding:0 11px;
+	text-decoration:none;
+}
+.tab:hover .tablink a{
+	color:#357d13;
+}
+.dropdown:hover .arwlink{
+	border-top:1px solid #013d77;
+	height:63px;
+}
+.dropdown ul{
+	display:none;
+}
+.dropdown:hover ul{
+	position:absolute;
+	display:block;
+	margin-left:-1px;
+	top:-65px;
+	left:1px;
+	z-index:9; 
+	border-bottom:1px solid #002e5a;
+}
+.subnav{
+	width:500px; 
+	min-height:48px;
+}
+.subnav a{
+	padding:4px 0 4px 10px;
+	line-height:16px;
+	width:70px;
+	display:block;
+	white-space:nowrap;
+	color:#fff;
+	float:left;
+}
+.subnav :hover{
+	text-decoration:underline;
+	color:#fff;
+}
+.dropdown .subnav{
+	background-color:#002e5a;
+	opacity:0.9;
+	filter:alpha(opacity=90);
+	padding:8px;
+}
+
+/* 其他 */
+.hot{
+	width:22px;
+	height:12px;
+	background:url(../images/a.png) no-repeat -111px -40px;
+	position:absolute;
+	right:22px;
+	top:-9px;
+	z-index:999;
+}
+.new{
+	width:22px;
+	height:12px;
+	background:url(../images/a.png) no-repeat -85px -40px;
+	position:absolute;
+	right:22px;
+	top:-9px;
+	z-index:999;
+}
+
+/*首页图片滚动*/
+.sy4{ float:left; width:1000px; height:246px; background:url(/templets/images/sy6.jpg);margin-top:0px;}
+
+.sy4 h1{ padding-left:966px; padding-top:15px; font-size:14px;}
+.sy4 h1 a,.sy6 h1 a{ color:#666;}
+
+.blk_18 {margin-top: 40px; font-size: 14px; overflow: hidden; width: 993px; ZOOM: 1; margin-left:5px;}
+
+.blk_18 .pcont {float: left; overflow: hidden; width: 938px; height:150px;}
+
+.blk_18 .ScrCont {width: 32766px; ZOOM: 1}
+
+.blk_18 #List1_1 {float: left}
+
+.blk_18 #List2_1 {float: left}
+
+.blk_18 .LeftBotton,.blk_18 .RightBotton{float: left;width: 15px;height: 25px; margin:50px 5px;}
+
+.blk_18 .LeftBotton {background: url(/templets/images/left.jpg) no-repeat; }
+
+.blk_18 .RightBotton {background: url(/templets/images/right.jpg) no-repeat;}
+
+.blk_18 .pl img {display: block;cursor: pointer; border:1px solid #ccc;}
+
+.blk_18 .pl {float: left; width: 188px; line-height: 24px; text-align: center; margin-left:10px; color:#666;}

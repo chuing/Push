@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/templets/default/style/default.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/default/style/flower.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="/images/js/j.js" ></script>
+<script language="javascript" type="text/javascript" src="/images/js/ltxt.js" ></script>
+<script type="text/javascript"> 
+$(function() {
+	$(".mleft dd").slideUp();
+	var $dt = $(".mleft dt");
+	$dt.click(function(){
+		//$(this).hasClass("over_bg")?$(this).removeClass("over_bg"):$(this).addClass("over_bg");
+		$dt.removeClass("over_bg").eq($dt.index($(this))).addClass("over_bg");
+		var $dd = $(".mleft dd");
+		$dd.slideUp().eq($dd.index($(this).next())).slideDown();
+		var _l=$(this).attr("lang").split(',');
+		$(this).attr("rel")=='1' ? getTxt($(this),$(".mright"),$(".txt_finish")):'';
+	});
+	//$(".mleft dt").hover(function(){$(this).addClass("over_bg")},function(){$(this).hasClass("over_bg")?$(this).removeClass("over_bg"):$(this).addClass("over_bg");});
+	var $li = $(".mleft dd li");
+	$li.click(function(){
+		$li.removeClass("overli").eq($li.index($(this))).addClass("overli");
+		//alert($(this).html());
+		getTxt($(this),$(".mright"),$(".txt_finish"));
+	});
+});
+
+</script>
+</head>
+<body class="channel">
+<div class="header_top">  
+    <div class="w980 center">  
+     <span id="time" class="time"><a href="/guangzhou"><b>广州站</b></a></span><span id="time" class="time"><a href="/zhongshan">中山站</a></span><span id="time" class="time"><a href="/foshan">佛山站</a></span>
+     <div class="toplinks">[<a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('/');">设为首页</a>] [<a href="javascript:window.external.AddFavorite('/','花城集团')">加入收藏</a>]</span></div>
+    </div> 
+</div>
+	<!-- //菜单 -->
+    <div id="navMenu" style="font-style:normal; font-weight:normal;">
+    	<ul>
+      	<li class="menuabg"><a href='/'><span>花城首页</span></a></li>
+      	
+      	<li><a href='/a/flower/qyjj'  rel='dropmenu12'><span>认识花城</span></a></li>
+      	<li class='hover'><a href='/a/ywly/'  rel='dropmenu6'><span>业务领域</span></a></li>
+      	<li><a href='/a/news/'  rel='dropmenu1'><span>政策前沿</span></a></li>
+      	
+        <li class='hover'><a href='/guangzhou/contact/' ><span>联系我们</span></a></li>
+    	</ul>
+    </div>	
+<!-- //header -->
+<div class="w980"><img src="/templets/default/images/flower/logoad.jpg" width="980" height="420" /></div> 
+<!-- /header -->
+<span class="txt_finish"><img src="/templets/default/images/flower/loader.gif" width="16" height="16" alt="数据加载..." style="vertical-align: middle" /> 正在努力加载...</span>
+<div class="topbg">
+	<div class="footbg">
+    	<div class="mleft">
+		<dl>
+            	<dt lang="25" rel="0">产业园</dt>
+                <dd>
+                	<ul><li lang="26">开发运营</li><li lang="34">写字楼招商</li><li lang="35">物业管理</li><li lang="36">装修设计</li></ul>
+                </dd>
+            </dl><dl>
+            	<dt lang="29" rel="0">企业服务</dt>
+                <dd>
+                	<ul><li lang="38">企业注册</li><li lang="39">企业管理咨询</li><li lang="40">财税服务</li></ul>
+                </dd>
+            </dl><dl>
+            	<dt lang="30" rel="1">人才服务</dt>
+                <dd>
+                	<ul><li lang="41">代理招聘</li><li lang="42">人事代理</li><li lang="43">劳务派遣</li><li lang="44">业务外包</li><li lang="45">专业服务</li></ul>
+                </dd>
+            </dl><dl>
+            	<dt lang="31" rel="0">知识产权</dt>
+                <dd>
+                	<ul><li lang="46">商标注册</li><li lang="47">商标设计</li><li lang="48">专利版权</li><li lang="49">品牌建设</li></ul>
+                </dd>
+            </dl><dl>
+            	<dt lang="32" rel="0">金融法律</dt>
+                <dd>
+                	<ul><li lang="37">服务体系</li></ul>
+                </dd>
+            </dl><dl>
+            	<dt lang="33" rel="0">文化艺术</dt>
+                <dd>
+                	<ul><li lang="25">产业园</li><li lang="29">企业服务</li><li lang="30">人才服务</li><li lang="31">知识产权</li><li lang="32">金融法律</li><li lang="33">文化艺术</li></ul>
+                </dd>
+            </dl>
+        </div>
+<div class="mright">
+<!--###-->
+<style type="text/css">
+.blockcontent {height:auto; width:90%; margin:0 auto 180px; overflow:hidden; font-family:"微软雅黑", "黑体";}
+.b_list_t1 {height:41px; width:200px; background:url(images/flower/b_list1_tbg.gif) no-repeat center bottom; overflow:hidden; margin:30px 0px;}
+.b_list_t2 {height:34px; width:248px; text-align:center; font-size:24px; font-family:"微软雅黑", "黑体"; letter-spacing:1px; background-color:#006699; color:#fff; overflow:hidden; margin-top:38px;}
+.b_list_u3 li{float:left; height:auto; width:49%; line-height:24px; height:24px; overflow:hidden;}
+.b_list_u3 li a {color:#006699;font-size:14px;font-family:"微软雅黑", "黑体"; }
+.b_list_u3 {width:100%; font-size:16px; font-family:"微软雅黑", "黑体"; line-height:30px; overflow:hidden; }
+.b_list_u3 p,.b_list_u3 span {text-indent:2em; font-size:14px; margin-top:15px;}
+.b_list_u3 span {color:#FC971F;}
+
+
+.d_list_t1 {height:364px; width:100%; background:url(images/flower/d_list_cbg.gif) no-repeat center bottom; overflow:hidden; margin:30px 0px;}
+.d_list_t2 {height:26px; width:100px; text-align:center; font-size:18px; font-family:"微软雅黑", "黑体"; letter-spacing:1px; background-color:#0D5EB6; color:#fff; overflow:hidden; margin-top:38px;}
+.d_list_u3 li{float:left; height:auto; width:49%; line-height:24px; height:24px; overflow:hidden;}
+.d_list_u3 li a {color:#006699;font-size:14px;font-family:"微软雅黑", "黑体"; }
+.d_list_u3 {width:100%; font-size:16px; font-family:"微软雅黑", "黑体"; line-height:30px; overflow:hidden; color:#0D5EB6; }
+.d_list_u3 p,.b_list_u3 span {text-indent:2em; font-size:14px; margin-top:8px;}
+.d_list_u3 span {color:#FC971F;}
+
+.d_list_t11 {height:378px; width:100%; background:url(images/flower/d_pp.png) no-repeat center bottom; overflow:hidden;}
+.d_list_t12 {height:295px; width:100%; background:url(images/flower/d_pb.png) no-repeat center bottom; overflow:hidden;}
+.d_dl {width:366px; height:auto; margin:0 auto; border-bottom:1px solid #0D5EB6;}
+.d_dl dt {background-color:#0D5EB6; text-align:center; height:49px; width:366px; line-height:48px; color:#fff; font-size:24px; letter-spacing:5px; margin-bottom:20px;}
+.d_dl dd {border:1px solid #0D5EB6; border-bottom:none; text-align:center; height:49px; width:364px; line-height:48px; color:#0D5EB6; font-size:24px; letter-spacing:2px;}
+
+</style>
+
+<div class="btdiv bbottom">
+	<h1>品牌建设</h1>
+    <h2>BRAND BUILDING</h2>
+</div>
+<blockquote class="blockcontent">
+	<div class="h42"></div>
+	<div class="d_list_u3">
+    	“品牌”是一种无形资产；“品牌”就是知名度，有了知名度就具有凝聚力与扩散力，就成为发展的动力。企业品牌企业是城市经济的细胞，企业品牌是带动城市经济的动力。而企业品牌的建设，首先要以诚信为先，没有诚信的企业，“品牌”就无从谈起。其次，企业品牌的建设，要以诚信为基础，产品质量和产品特色为核心，才能培育消费者的信誉认知度，企业的产品才有市场占有率和经济效益。品牌建设包括了品牌定位、品牌规划、品牌形象、品牌扩张等等。
+	</div>
+	<div class="h42"></div>
+    <div class="d_list_t11"></div>
+	<div class="h78"></div>
+    <div class="d_list_t12"></div>
+</blockquote>
+
+
+<div class="btdiv bbottom">
+	<h1>专利版权</h1>
+    <h2>PATENT AND COPYRIGHT</h2>
+</div>
+<blockquote class="blockcontent">
+	<div class="h42"></div>
+	<div class="d_list_u3">
+    	<p style="text-indent:0;">◆专利是受法律规范保护的发明创造，它是指一项发明创造向国家审批机关提出专利申请，经依法审查合格后向专利申请人授予的在规定的时间内对该项发明创造享有的专有权。</p>
+        <p style="text-indent:0;">◆专利权是一种专有权，这种权利具有独占的排他性。</p>
+        <p style="text-indent:0;">◆版权即著作权，是指文学、艺术、科学作品的作者对其作品享有的权利（包括财产权、人身权）。版权是知识产权的一种类型，它是由自然科学、社会科学以及文学、音乐、戏剧、绘画、雕塑、摄影和电影摄影等方面的作品组成。</p>
+    </div>
+	<div class="h68"></div>
+	<dl class="d_dl">
+    	<dt>专利业务</dt>
+        <dd>外观设计</dd>
+        <dd>实用新型</dd>
+        <dd>发明专利</dd>
+    </dl>
+	<div class="h78"></div>
+	<dl class="d_dl">
+    	<dt>版权业务</dt>
+        <dd>作品版权登记</dd>
+        <dd>计算机软件版权登记</dd>
+    </dl>
+</blockquote>
+
+
+<div class="btdiv bbottom">
+	<h1>商标设计</h1>
+	<h2>TRADEMARK DESIGN</h2>
+</div>
+<blockquote class="blockcontent">
+	<div class="h42"></div>
+	<div class="b_list_u3">
+    <p style="color:#0D5EB6;">商标设计是指商标创意的体现和表达，是用文字或艺术手段将商标构思具体化、成果化。商标是一个企业在开始的时候为自身形象打造的一个缩影，是从企业的名称、企业经营种类、地理位置及企业文化构思设计出来的，当企业发展到有强大的生命度并达到一定程度，这个商标慢慢的可以成为驰名商标。而后可以慢慢变成一种文化。</p>
+    </div>
+    <div class="d_list_t1"></div>
+	<div class="h42"></div>
+    <div class="d_list_t2">发展趋势</div>
+    <div class="d_list_u3">
+    	<p>（一） 由复杂向简约的演变</p>
+    	<p>（二） 由具象向抽象的演变</p>
+    	<p>（三） 色彩的多样性的演变</p>
+    	<p>（四） 平面化趋向立体化</p>
+    	<p>标志的发展是一个设计相互交融，设计风格的多样化的过程。标志作为商业产物，设计手段是次要的，目的才是第一位的。更注重的应使其商业性。 </p>
+    </div>
+	<div class="h42"></div>
+    <div class="d_list_u3">
+    	<b>
+        我们有专业高效的设计师团队为你<br />
+        企业发展走好第一步
+        </b>
+    </div>
+</blockquote>
+
+
+
+<div class="btdiv bbottom">
+	<h1>商标注册</h1>
+	<h2>TRADEMARK REGISTRATION</h2>
+</div>
+<blockquote class="blockcontent">
+    <div class="b_list_t1"></div>
+    <div class="b_list_u3">
+        <ul>
+            <li><a href="">◆商标国内注册</a></li>
+            <li><a href="">◆商标国外注册</a></li>
+            <li><a href="">◆商标变更/转让/续展/许可合同备案等</a></li>
+            <li><a href="">◆商标驳回复审</a></li>
+            <li><a href="">◆商标异议/异议复审及答辩</a></li>
+            <li><a href="">◆争议及答辩</a></li>
+            <li><a href="">◆商标监控</a></li>
+            <li><a href="">◆商标法律顾问</a></li>
+            <li><a href="">◆著/驰名商标的培育和申请 </a></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="b_list_t2">商标注册的保护措施</div>
+    <div class="b_list_u3">
+    	<p><span>1.选择具有显著性的商标。</span>在商标取名时，应考虑选择具有较强显著性的名称。通常来讲，臆造的词汇、与商品或服务特征关联性越少的名称，越容易得到法律保护，也能有效规避他人“打擦边球”的行为。</p>
+    	<p><span>2.先申请后使用。</span>我国商标法对商标注册适用“申请在先”原则，如果企业对商标名称“用而不注”，一旦被他人抢注，将会带来不可估量的损失。</p>
+    	<p><span>3.对商标进行防御联合注册。</span>商标具有一定知名度后，在同一种或类似商品上往往会出现一些其他近似商标。在市场中，被称为“傍名牌”、“搭便车”现象。防御联合商标的注册，既能有效防止他人在相同或类似商品或服务上注册近似商标，引起产源混淆，也能阻止他人借用自己辛苦创建的商誉，损害企业的经济利益。</p>
+    	<p><span>4.商标、商号和域名一体化保护。</span>商标、商号和域名与企业均具有直接的对应的关系，进行一体化保护，能从根本上杜绝他人的抢注行为。</p>
+    	<p><span>5.对商标进行规范使用。</span>商标的不规范使用会导致一系列的风险，可能会导致自身的商标权益得不到充分保护，也有可能导致商标被他人撤销，甚至会在不经意间侵犯他人的商标权，由此引发侵权事件。</p>
+    	<p><span>6.及时主张商标权利。</span>在发现自己商标被抢注后，应及时通过商标异议或争议程序主张权利，将抢注行为扼杀在萌芽状态。也可以采用司法程序，要求侵权人承担民事法律责任。</p>
+    </div>
+</blockquote>
+
+<!----#####-->
+</div>
+        <input type="hidden" id="act" name="act" value="txt" />
+    </div>
+</div>
+
+<!-- //底部模板 -->
+<div class="footer w960 center mt1 clear">
+	<!-- 
+		为了支持织梦团队的发展,请您保留织梦内容管理系统的链接信息.
+		我们对支持织梦团队发展的朋友表示真心的感谢!织梦因您更精彩!
+	-->
+    <div class="footer_left"></div>
+    <div class="footer_body">
+	<p class="powered">    网站地图 | 隐私安全 | 站外导航 | 版权所有 | 常见问题 | 联系方式 | RSS订阅
+ Copyright @花城（集团）有限公司　   京ICP备05045648号　   技术支持：花城集团信息管理部
+		Powered by <a href="http://www.dedecms.com" title="织梦内容管理系统(DedeCms)--国内最专业的PHP网站管理系统，轻松建站的首选利器。" target="_blank"><strong>DedeCMS_V57_UTF8_SP1</strong></a> &copy; 2004-2011 <a href="http://www.desdev.cn/" target="_blank">DesDev</a> Inc.<br /><div class="copyright">Copyright &copy; 2002-2011 DEDECMS. 广东花城企业管理服务有限公司 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a>&nbsp;&nbsp;</div></p>        
+<!-- /powered -->
+   </div>
+   <div class="footer_right"></div>
+</div> 
+<!-- /footer -->
+</body>
+</html>
+

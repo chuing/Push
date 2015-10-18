@@ -1,0 +1,118 @@
+﻿
+<div id="head">
+	<div class="top_middle">
+		<div class="nav_logo">
+		<div class="logo"><img src="/templets/images/logo.png" /></div>
+		<div id=menu>
+		<div id=nav>
+			<div class=l></div>
+			<ul class=c>
+ 			<li><span class=v><A href="/" target="_blank">首页</A></span> 
+				<div class=kind_menu style="LEFT: 20px">欢迎您访问兄弟网络！<a href="www.sd-seo.cn">日照网站优化</a><a href="www.sd-seo.cn">日照网站建设</a><a href="www.sd-seo.cn">日照百度推广</a><a href="www.sd-seo.cn">日照SEO</a> </div>
+			</li>
+		{dede:channelartlist row='7'}
+			<li><span class=v><A href="/a/xwzx/">{dede:field name='typename'/}</A></span> 
+				<div class=kind_menu>
+                {dede:channel type='son' noself='yes'}<a href='[field:typeurl/]' target="_blank">[field:typename/]</a><span>|</span>{/dede:channel}				
+				</div>
+			</li>
+        {/dede:channelartlist}
+        <!--
+			<li><span class=v><A href="/a/xwzx/">新闻中心</A></span> 
+				<div class=kind_menu style="LEFT: 80px">
+				{dede:channel type='son' row='9' typeid='3'}
+				<a href='[field:typeurl/]' target="_blank">[field:typename/]</a><span>|</span>
+				{/dede:channel} 				
+				</div>
+			</li>
+			
+			<li><span class=v><A href="/a/wzal/">网站案例</A></span> 
+				<div class=kind_menu style="LEFT: 40px">
+				{dede:channel type='son' row='9' typeid='1'}
+				<a href='[field:typeurl/]' target="_blank">[field:typename/]</a><span>|</span>
+				{/dede:channel} 				
+				</div>
+			</li>
+			
+			<li><span class=v><A href="/a/wzyh/">网站优化</A></span> 
+				<div class=kind_menu style="LEFT: 155px">
+				{dede:channel type='son' row='9' typeid='2'}
+				<a href='[field:typeurl/]' target="_blank">[field:typename/]</a><span>|</span>
+				{/dede:channel} 				
+				</div>
+			</li>
+  
+		    <li><span class=v><A href="/a/wzjs/">网站建设</A></span> 
+				<div class=kind_menu style="padding-left:180px;">
+				{dede:channel type='son' row='9' typeid='12'}
+				<a href='[field:typeurl/]' target="_blank">[field:typename/]</a><span>|</span>
+				{/dede:channel}				
+				</div>
+		    </li>
+			<li><span class=v><A href="/a/sj/">手机APP</A></span> 
+				<div class=kind_menu style="padding-left:250px;">
+				{dede:channel type='son' row='9' typeid='33'}
+				<a href='[field:typeurl/]' target="_blank">[field:typename/]</a><span>|</span>
+				{/dede:channel}				
+				</div>
+			</li>
+			
+			<li><span class=v><A href="/a/ppch/">品牌策划</A></span> 
+				<div class=kind_menu style="padding-left:250px;">
+				{dede:channel type='son' row='9' typeid='13'}
+				<a href='[field:typeurl/]' target="_blank">[field:typename/]</a><span>|</span>
+				{/dede:channel}				
+				</div>
+			</li>
+			<li><span class=v><A href="/a/lxwm/">联系我们</A></span> 
+				<div class=kind_menu style="padding-left:430px;">
+				{dede:channel type='son' row='9' typeid='4'}
+				<a href='[field:typeurl/]' target="_blank">[field:typename/]</a><span>|</span>
+				{/dede:channel}				
+				</div>
+			</li>
+          -->
+  			</ul>
+			<div class=r></div>
+		</div>
+		<!--nav-->
+		</div>
+		</div>
+	</div>
+</div>
+<SCRIPT type=text/javascript>
+    var site_url = window.location.href.toLowerCase();
+	/*
+	switch (true) {		
+		default :
+			$("#nav li").attr("class","");
+			$("#nav li").eq(0).attr("class","nav_lishw");
+			$(".nav_lishw .v a").attr("class","sele");
+			$(".nav_lishw .kind_menu").show();
+	}*/
+	$("#nav li").hover(
+		function(){
+			clearTimeout(setTimeout("0")-1);
+			$("#nav .kind_menu").hide(); 
+			$("#nav li .v .sele").attr("class","shutAhover");
+			$(this).attr("id","nav_hover")
+			$("#nav_hover .v a").attr("class","sele");
+			$("#nav_hover .kind_menu").show(); 
+		},
+		function(){
+			
+			if($(this).attr("class") != "nav_lishw"){
+				$("#nav_hover .v .sele").attr("class","");
+				//$("#nav_hover .kind_menu").hide(); 
+			}
+			$(this).attr("id","")
+			$("#nav li .v .shutAhover").attr("class","sele");
+			setTimeout(function(){
+				$(".nav_lishw .kind_menu").show();
+				$(".nav_lishw .v a").attr("class","sele");
+			},50); 
+		}
+	);
+	
+</SCRIPT>
+<!----End of head---->

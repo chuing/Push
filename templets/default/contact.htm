@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="{dede:global.cfg_description/}" />
+	<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <link rel="shortcut icon" href="img/favicon.png">
+    <title>{dede:global.cfg_webname/}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/flexslider.css"/>
+    <link href="/assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/psdkf.css" rel="stylesheet">
+    <link href="/css/style-responsive.css" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+      <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="/js/jquery.js"></script>
+  </head>
+
+  <body>
+    {dede:include filename="head.htm"/}
+
+    <!--breadcrumbs start-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-4">
+                    <h1>联系我们</h1>
+                </div>
+                <div class="col-lg-8 col-sm-8">
+                    <ol class="breadcrumb pull-right">
+                        <li><a href="http://www.push114.com">首页</a></li>
+                        <li class="active">联系我们</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--breadcrumbs end-->
+
+    <!--baidu map start-->
+     <div class="contact-map">
+         <div id="l-map" style="height:520px;width:100%;"></div>
+     </div>
+     <!--baidu map end-->
+
+     <!--container start-->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-5 address">
+                <h4>广州谱式达人力资源服务有限公司</h4>
+                <p>
+                    广州谱式达人力资源服务有限公司<br>
+                    广州谱式达，拥有多年户口办理、社保、公积金、人事代理、代理招聘、DM业务、工商财税等经验。
+                </p>
+                <br>
+                <br>
+                <p>
+                    地址： 广州市越秀区云鹤北街26巷1号白云区科技馆410室<br>
+                    电话： <span class="muted">4006-020-308</span><br/>
+                    传真： <span class="muted">020-38377312</span><br/>
+                    Email： <span class="muted">36908589@qq.com</span>
+                </p>
+            </div>
+            <div class="col-lg-7 col-sm-7 address">
+                <h4>附近公交/地铁</h4>
+                <p>
+                公交：<br>
+                动物园总站：（72路; 74路; 84a路; 84路; 127路; 220路; 246路; 706路; 高峰快线79路; 高峰快线8路; 夜46路）<br>
+                黄花岗：（6路; 11路; 16路; 65路; 72路; 74路; 78a路; 78路; 85路; 112路; 192路; 201路; 219路; 220路; 223路; 236路; 285路; 290路; 535路; 833路; 862b路; 862路; <br>
+                大学城专线4路; 高峰快线12路; 高峰快线79路; 高峰快线8路; 夜46路; 夜5路; 夜5路上半夜班; 夜69路; 夜71路）<br>
+                动物园公交站场停车场：（越秀区先烈中路104号）<br>
+                <br>
+                地铁：<br>
+                动物园（地铁5号线）;  黄花岗（地铁6号线）
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!--container end-->
+
+    {dede:include filename="foot.htm"/}
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/hover-dropdown.js"></script>
+    <script type="text/javascript" src="/assets/bxslider/jquery.bxslider.js"></script>
+
+    <!--common script for all pages-->
+    <script src="/js/common-scripts.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=M70yBkn81PTTHCTClqFSEDKe"></script>
+    
+    <script type="text/javascript">
+        var sContent ="广州谱式达人力资源有限公司<br>全国热线：4006-020-308";
+        var map = new BMap.Map("l-map");
+        var point = new BMap.Point(113.309518,23.145863);
+        map.centerAndZoom(point, 19); 
+        var infoWindow = new BMap.InfoWindow(sContent);
+        map.openInfoWindow(infoWindow,point);
+    </script>
+
+  </body>
+</html>
